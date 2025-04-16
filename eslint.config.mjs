@@ -23,6 +23,12 @@ const eslintConfig = [
       '@next/next/no-sync-scripts': 'error',
       '@next/next/no-css-tags': 'error',
       '@next/next/no-title-in-document-head': 'error',
+
+      '@typescript-eslint/explicit-function-return-type': 'error',
+      '@typescript-eslint/array-type': 'error',
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
+      '@typescript-eslint/no-empty-interface': 'error',
+      '@typescript-eslint/no-empty-object-type': 'error',
     },
   }),
 ];

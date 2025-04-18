@@ -2,17 +2,20 @@ import { cn } from '@/utils/cn';
 import { cva } from 'class-variance-authority';
 import { JSX } from 'react';
 
-const buttonVariants = cva('px-4 py-2 rounded-md font-semibold', {
-  variants: {
-    variant: {
-      primary: 'bg-black text-white',
-      secondary: 'bg-white text-black',
+const buttonVariants = cva(
+  'flex items-center rounded-md font-semibold gap-4 px-4 py-2',
+  {
+    variants: {
+      variant: {
+        primary: 'bg-black text-white',
+        secondary: 'bg-white text-black',
+      },
+    },
+    defaultVariants: {
+      variant: 'primary',
     },
   },
-  defaultVariants: {
-    variant: 'primary',
-  },
-});
+);
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'primary' | 'secondary';
@@ -31,7 +34,7 @@ export function Button({
     <button {...props} className={cn(buttonVariants({ variant }), className)}>
       {children}
 
-      {icon ? icon : null}
+      {icon && <span>{icon}</span>}
     </button>
   );
 }

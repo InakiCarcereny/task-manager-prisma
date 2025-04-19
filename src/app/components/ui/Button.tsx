@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 import { JSX } from 'react';
 
 const buttonVariants = cva(
-  'flex items-center rounded-md font-semibold gap-4 px-4 py-2',
+  'flex items-center rounded-md font-semibold gap-2 px-4 py-2',
   {
     variants: {
       variant: {

@@ -34,7 +34,9 @@ export function HeaderLayout({ children }: HeaderLayoutProps): JSX.Element {
         </div>
       </header>
 
-      <main className='mx-auto h-full max-w-[1252px] py-4'>{children}</main>
+      <main className='mx-auto flex h-full max-w-[1252px] flex-col py-4'>
+        {children}
+      </main>
     </>
   );
 }

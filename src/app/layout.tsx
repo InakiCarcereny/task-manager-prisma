@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import { JSX } from 'react';
 import { ThemeProvider } from '@/context/theme-provider';
+import { CreateTaskModal } from '@/components/CreateTaskModal';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
@@ -26,6 +27,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+
+          <CreateTaskModal />
         </ThemeProvider>
       </body>
     </html>

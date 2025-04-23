@@ -4,12 +4,10 @@ import { TaskList } from '@/components/TaskList';
 
 export default function Home(): JSX.Element {
   return (
-    <>
-      <HeaderLayout>hello</HeaderLayout>
-
+    <HeaderLayout>
       <Suspense fallback={<div>Loading...</div>}>
         <TaskList />
       </Suspense>
-    </>
+    </HeaderLayout>
   );
 }

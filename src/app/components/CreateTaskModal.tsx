@@ -4,6 +4,8 @@ import { useCloseOnEscape } from '@/hooks/useCloseOnEscape';
 import { useOutsideClick } from '@/hooks/useOutsideClick';
 import { useModalStore } from '@/store/modal-store';
 import { JSX, useRef } from 'react';
+import { CloseModalButton } from '@/components/CloseModalButton';
+import { TaskForm } from '@/components/TaskForm';
 
 export function CreateTaskModal(): JSX.Element {
   const { isOpen, type, closeModal } = useModalStore();
@@ -20,8 +22,16 @@ export function CreateTaskModal(): JSX.Element {
         <div className='absolute top-0 left-0 flex h-screen w-full items-center justify-center bg-black/50'>
           <div
             ref={modalRef}
-            className='flex h-[500px] w-[450px] flex-col rounded-md bg-[#1e1f1f] px-2 py-4'
-          ></div>
+            className='flex h-[500px] w-[450px] flex-col gap-8 rounded-md bg-[#1e1f1f] px-4 py-4'
+          >
+            <header className='flex w-full items-center justify-between'>
+              <h1 className='text-2xl font-semibold text-white'>Task</h1>
+
+              <CloseModalButton />
+            </header>
+
+            <TaskForm />
+          </div>
         </div>
       )}
     </>

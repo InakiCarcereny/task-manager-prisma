@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 import { JSX } from 'react';
 
 const buttonVariants = cva(
-  'flex items-center rounded-md font-semibold gap-2 px-4 py-2',
+  'flex items-center justify-center rounded-md font-semibold gap-2 px-4 py-2',
   {
     variants: {
       variant: {
@@ -17,11 +17,10 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';
-} & {
   icon?: JSX.Element;
-};
+}
 
 export function Button({
   className,

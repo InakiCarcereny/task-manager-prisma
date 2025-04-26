@@ -10,15 +10,16 @@ export function useOutsideClick(
 
     const handleClickOutside = (event: MouseEvent): void => {
       const el = ref?.current;
+
       if (el && !el.contains(event.target as Node)) {
         callBack();
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    addEventListener('mousedown', handleClickOutside);
 
     return (): void => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      removeEventListener('mousedown', handleClickOutside);
     };
   }, [ref, callBack, enabled]);
 }

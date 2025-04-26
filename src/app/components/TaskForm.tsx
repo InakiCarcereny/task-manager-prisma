@@ -7,8 +7,12 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { createTask } from '@/actions/task';
+import { useModalStore } from '@/store/modal-store';
+import { toast } from 'sonner';
 
 export function TaskForm(): JSX.Element {
+  const { closeModal } = useModalStore();
+
   const {
     control,
     handleSubmit,
@@ -19,6 +23,9 @@ export function TaskForm(): JSX.Element {
 
   const onSubmit: SubmitHandler<CreateTask> = async (data) => {
     await createTask(data);
+    closeModal();
+
+    toast.success('Task created successfully');
   };
 
   return (

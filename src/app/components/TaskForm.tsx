@@ -5,7 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { JSX } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Input } from '@/components/ui/Input';
-import { Button } from './ui/Button';
+import { Button } from '@/components/ui/Button';
+import { createTask } from '@/actions/task';
 
 export function TaskForm(): JSX.Element {
   const {
@@ -16,8 +17,8 @@ export function TaskForm(): JSX.Element {
     resolver: zodResolver(createTaskSchema),
   });
 
-  const onSubmit: SubmitHandler<CreateTask> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<CreateTask> = async (data) => {
+    await createTask(data);
   };
 
   return (

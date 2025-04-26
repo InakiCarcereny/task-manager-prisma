@@ -1,7 +1,5 @@
-import { UUID } from 'crypto';
-
-interface Task {
-  id: UUID;
+export interface Task {
+  id: string;
   name: string;
   description: string;
   priority: string;

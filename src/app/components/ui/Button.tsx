@@ -9,6 +9,7 @@ const buttonVariants = cva(
       variant: {
         primary: 'bg-black text-white',
         secondary: 'bg-white text-black',
+        tertiary: 'bg-zinc-200 text-zinc-400',
       },
     },
     defaultVariants: {
@@ -18,7 +19,7 @@ const buttonVariants = cva(
 );
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'tertiary';
   icon?: JSX.Element;
 }
 

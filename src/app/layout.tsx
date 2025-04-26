@@ -4,6 +4,7 @@ import './globals.css';
 import { JSX } from 'react';
 import { ThemeProvider } from '@/context/theme-provider';
 import { CreateTaskModal } from '@/components/CreateTaskModal';
+import { Toaster } from 'sonner';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${poppins.className} bg-[#171717] antialiased`}>
+      <body className={`${poppins.className} bg-zinc-200 antialiased`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
@@ -30,6 +31,8 @@ export default function RootLayout({
 
           <CreateTaskModal />
         </ThemeProvider>
+
+        <Toaster />
       </body>
     </html>
   );

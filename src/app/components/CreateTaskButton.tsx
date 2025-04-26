@@ -12,7 +12,7 @@ export function CreateTaskButton(): JSX.Element {
     <Button
       onClick={() => openModal('create-task')}
       icon={<Plus />}
-      variant='secondary'
+      variant='tertiary'
     >
       <span>Create</span>
     </Button>

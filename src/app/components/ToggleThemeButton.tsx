@@ -10,7 +10,7 @@ export function ToggleThemeButton(): React.JSX.Element {
   return (
     <Button
       onClick={() => setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))}
-      variant='secondary'
+      variant='tertiary'
     >
       <span>Toggle theme</span>
     </Button>

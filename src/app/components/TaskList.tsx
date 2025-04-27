@@ -24,6 +24,7 @@ export async function TaskList(): Promise<JSX.Element> {
           name={task.name}
           description={task.description}
           priority={task.priority}
+          id={task.id}
           createdAt={task.createdAt}
         />
       ))}

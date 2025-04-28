@@ -14,7 +14,7 @@ export function CreateTaskButton(): JSX.Element {
       icon={<Plus />}
       variant='tertiary'
     >
-      <span>Create</span>
+      Create
     </Button>
   );
 }

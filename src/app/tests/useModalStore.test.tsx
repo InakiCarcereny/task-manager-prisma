@@ -1,5 +1,5 @@
 import { act } from 'react';
-import { useModalStore } from '@/store/modal-store'; // Ajusta la ruta
+import { useModalStore } from '@/store/modal-store';
 
 describe('useModalStore', () => {
   it('Opens modal when openModal is called', () => {

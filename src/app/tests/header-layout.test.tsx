@@ -3,7 +3,7 @@ import { HeaderLayout } from '@/layouts/header-layout';
 
 describe('<HeaderLayout />', () => {
   it('renders the h1 element', () => {
-    render(<HeaderLayout>task</HeaderLayout>);
+    render(<HeaderLayout>Test</HeaderLayout>);
 
     const h1 = screen.getByRole('heading', {
       level: 1,

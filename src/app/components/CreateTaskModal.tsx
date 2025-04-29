@@ -22,10 +22,10 @@ export function CreateTaskModal(): JSX.Element {
         <div className='absolute top-0 left-0 flex h-screen w-full items-center justify-center bg-black/50'>
           <div
             ref={modalRef}
-            className='flex h-[500px] w-[450px] flex-col gap-8 rounded-md bg-[#1e1f1f] px-4 py-4'
+            className='flex h-[500px] w-[450px] flex-col gap-8 rounded-md bg-white px-4 py-4'
           >
             <header className='flex w-full items-center justify-between'>
-              <h1 className='text-2xl font-semibold text-white'>Task</h1>
+              <h1 className='text-2xl font-semibold text-black'>Task</h1>
 
               <CloseModalButton />
             </header>

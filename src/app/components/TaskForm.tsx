@@ -40,6 +40,7 @@ export function TaskForm(): JSX.Element {
           placeholder='Name'
           control={control}
           error={errors.name}
+          variant='secondary'
         />
 
         <Input
@@ -48,6 +49,7 @@ export function TaskForm(): JSX.Element {
           placeholder='Description'
           control={control}
           error={errors.description}
+          variant='secondary'
         />
 
         <Input
@@ -56,10 +58,11 @@ export function TaskForm(): JSX.Element {
           placeholder='Priority'
           control={control}
           error={errors.priority}
+          variant='secondary'
         />
       </div>
 
-      <Button type='submit' variant='secondary'>
+      <Button type='submit' variant='primary'>
         Create
       </Button>
     </form>

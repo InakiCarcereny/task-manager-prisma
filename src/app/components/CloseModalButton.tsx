@@ -10,7 +10,7 @@ export function CloseModalButton(): JSX.Element {
   return (
     <button
       onClick={closeModal}
-      className='cursor-pointer text-white hover:text-white/80'
+      className='cursor-pointer text-black hover:text-black/80'
     >
       <Close className='h-8 w-8' />
     </button>

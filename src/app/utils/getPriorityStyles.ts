@@ -5,8 +5,8 @@ export function getPriorityStyles(priority: string): string {
     case 'medium':
       return 'bg-orange-100 text-orange-400';
     case 'low':
-      return 'bg-blue-100 text-blue-400';
+      return 'bg-green-100/40 text-green-400';
     default:
-      return 'bg-gray-100 text-gray-400';
+      return 'bg-blue-100 text-blue-400';
   }
 }

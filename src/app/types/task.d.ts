@@ -1,8 +1,10 @@
 export interface Task {
-  id: string;
+  id: TaskId;
   name: string;
   description: string;
   priority: string;
   createdAt: Date;
   updatedAt: Date;
 }
+
+type TaskId = string;

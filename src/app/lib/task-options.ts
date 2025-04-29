@@ -1,7 +1,7 @@
 import { deleteTask } from '@/actions/task';
 import { Pencil } from '@/icons/Pencil';
 import { Trash } from '@/icons/Trash';
-import { Task } from '@/types/task';
+import { Task, TaskId } from '@/types/task';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 export const TASK_OPTIONS = [
@@ -10,7 +10,7 @@ export const TASK_OPTIONS = [
     icon: Pencil({}),
     bg: 'bg-red-100',
     text: 'text-red-400',
-    onClick: (taskId: string, router: AppRouterInstance): void =>
+    onClick: (taskId: TaskId, router: AppRouterInstance): void =>
       router.push(`/task/${taskId}`),
   },
   {
@@ -18,6 +18,6 @@ export const TASK_OPTIONS = [
     icon: Trash({}),
     bg: 'bg-zinc-100',
     text: 'text-zinc-400',
-    onClick: (taskId: string): Promise<Task> => deleteTask(taskId),
+    onClick: (taskId: TaskId): Promise<Task> => deleteTask(taskId),
   },
 ] as const;

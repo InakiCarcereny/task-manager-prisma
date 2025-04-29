@@ -5,17 +5,6 @@ import { getTasks } from '@/actions/task';
 export async function TaskList(): Promise<JSX.Element> {
   const allTasks = await getTasks();
 
-  // const [todoList, todos] = useDragAndDrop<HTMLUListElement, string>(allTasks, {
-  //   group: 'todoList',
-  // });
-
-  // const [doneList, dones] = useDragAndDrop<HTMLUListElement, string>(
-  //   doneItems,
-  //   {
-  //     group: 'todoList',
-  //   },
-  // );
-
   return (
     <ul className='grid w-full grid-cols-3 gap-x-2 gap-y-4'>
       {allTasks.length > 0 ? (
@@ -32,7 +21,7 @@ export async function TaskList(): Promise<JSX.Element> {
           ))}
         </>
       ) : (
-        <div>No tasks yet.</div>
+        <div className='text-xl text-black'>No tasks yet.</div>
       )}
     </ul>
   );

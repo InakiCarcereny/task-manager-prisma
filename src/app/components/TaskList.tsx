@@ -18,16 +18,22 @@ export async function TaskList(): Promise<JSX.Element> {
 
   return (
     <ul className='grid w-full grid-cols-3 gap-x-2 gap-y-4'>
-      {allTasks.map((task) => (
-        <Task
-          key={task.id}
-          name={task.name}
-          description={task.description}
-          priority={task.priority}
-          id={task.id}
-          createdAt={task.createdAt}
-        />
-      ))}
+      {allTasks.length > 0 ? (
+        <>
+          {allTasks.map((task) => (
+            <Task
+              key={task.id}
+              name={task.name}
+              description={task.description}
+              priority={task.priority}
+              id={task.id}
+              createdAt={task.createdAt}
+            />
+          ))}
+        </>
+      ) : (
+        <div>No tasks yet.</div>
+      )}
     </ul>
   );
 }

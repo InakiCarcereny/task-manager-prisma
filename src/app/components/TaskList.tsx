@@ -21,7 +21,9 @@ export async function TaskList(): Promise<JSX.Element> {
           ))}
         </>
       ) : (
-        <div className='text-xl text-black'>No tasks yet.</div>
+        <span className='text-xl text-black dark:text-white'>
+          No tasks yet.
+        </span>
       )}
     </ul>
   );

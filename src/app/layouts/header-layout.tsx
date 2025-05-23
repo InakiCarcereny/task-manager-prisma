@@ -12,7 +12,9 @@ export function HeaderLayout({ children }: HeaderLayoutProps): JSX.Element {
     <>
       <header className='w-full bg-white'>
         <div className='mx-auto flex h-[80px] max-w-[1252px] items-center justify-between'>
-          <h1 className='text-2xl font-semibold text-black'>Tasks</h1>
+          <h1 className='text-2xl font-semibold text-black dark:text-white'>
+            Tasks
+          </h1>
 
           <div className='flex items-center gap-4'>
             <div className='flex max-w-[250px] items-center gap-2 rounded-md bg-zinc-200 px-4 py-2'>

@@ -30,7 +30,9 @@ export function Task({
           <TaskOptions id={id} />
         </header>
 
-        <h2 className='text-lg font-semibold text-black'>{name}</h2>
+        <h2 className='text-lg font-semibold text-black dark:text-white'>
+          {name}
+        </h2>
 
         <p className='text-sm text-zinc-600'>{description}</p>
       </div>

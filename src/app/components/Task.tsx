@@ -31,7 +31,7 @@ export function Task({
         </header>
 
         <h2 className='text-lg font-semibold text-black dark:text-white'>
-          {name}
+          {name}.
         </h2>
 
         <p className='text-sm text-zinc-600'>{description}</p>
